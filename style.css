@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+  --font1: "Red Hat Display";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-image: url("images/pattern-background-desktop.svg");
+  background-repeat: repeat-x;
+  background-color: var(--pale-blue);
+}
+
+h1 {
+  font-size: 1.6em;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--desaturated-blue);
+}
+
+.container {
+  font-family: var(--font1);
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin: 7.5rem auto;
+  width: 360px;
+  height: auto;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0px 10px 50px 1px hsla(224, 23%, 55%, 0.4);
+}
+
+.image-container {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  max-height: auto;
+}
+
+.description-order-container {
+  margin: 1rem 2rem 2rem 2rem;
+  /* border: 1px solid red; */
+}
+
+.plans {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  background-color: var(--very-pale-blue);
+  border-radius: 10px;
+}
+
+.icon,
+.change {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1rem;
+}
+
+.plan {
+  display: inline-block;
+  vertical-align: middle;
+  flex-direction: column;
+  justify-content: space-around;
+  line-height: 0;
+}
+
+.change a {
+  font-weight: 700;
+  color: var(--bright-blue);
+}
+
+.payment-btn {
+  width: 100%;
+  border: 0;
+  margin: 0 auto;
+  color: white;
+  border-radius: 10px;
+  background-color: var(--bright-blue);
+  box-shadow: 0px 10px 50px 1px rgba(56, 41, 224, 0.4);
+}
+
+.cancel {
+  color: var(--desaturated-blue);
+}
+
+/* Active State */
+
+.change a:hover,
+.cancel:hover,
+.payment-btn:hover {
+  cursor: pointer;
+}
+
+.change a:hover {
+  color: hsla(245, 75%, 52%, 0.5);
+}
+.payment-btn:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: hsla(245, 75%, 52%, 0.5);
+}
+.cancel:hover {
+  color: black;
+}
+
+/* Frontend Mentor Styling */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Animation added, but not required */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+main {
+  animation: bounceIn 2s;
+}
+
+@keyframes colorPalette {
+  0% {
+    color: #ee6055;
+  }
+  25% {
+    color: #60d394;
+  }
+  50% {
+    color: #aaf683;
+  }
+  75% {
+    color: #ffd97d;
+  }
+  100% {
+    color: #ff9b85;
+  }
+}
+
+footer a {
+  animation: colorPalette 3s ease-in-out infinite;
+  /* animation-name: colorPalette;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear; */
+  /* linear is enabled default, it’s not necessary to add it make it work but it can make your code more expressive */
+}
